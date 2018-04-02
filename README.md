@@ -1,4 +1,5 @@
 # pan-demo
+演示视频在project1中
 
 1.打开终端，进入project1  
   cd /Users/.../project1
