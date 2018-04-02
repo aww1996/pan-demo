@@ -1,0 +1,21 @@
+$('.cancel').click(function(){
+    $('#user').val('');
+})
+
+$('#enter').click(function(){
+    $.ajax({
+        url:'http://localhost:8082',
+        method:'POST',
+        data:JSON.stringify({
+            'user':$('#user').val(),
+            'password':$('#password').val()
+        }),
+        success:function(data,status,jqXHR){
+            location.replace(data);
+        },
+        error:function(jqXHR,status,err){
+            $('#password').val('');
+            alert(jqXHR.responseText);
+        }
+    })
+})

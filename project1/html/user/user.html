@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>hello user</title>
+        <link rel="stylesheet" href="http://localhost:8080/user/style.css">
+        <link rel="stylesheet" href="http://localhost:8080/user/user.css">
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="blank">
+            <button class="icon-undo2 button" id="undo2"> 返回上一级</button>
+            <button class="icon-folder-plus button" id="folder-plus"> 新建文件夹</button>
+            <button class="icon-cloud-upload button" id="cloud-upload"> 文件上传</button>
+            <button id='make-sure'>查看上传文件信息</button>
+            <button id="upload-send">确定上传</button>
+            <input type="file" id="file-upload">
+            <div id="check-area" style="display:none">
+                <input type="text" id="new_folder" placeholder="请输入文件名">
+                <div class="icon-checkmark check-button" id="checkmark"></div>
+                <div class="icon-cross check-button" id="cross"></div>
+            </div>
+            <div id="upload-file-area" style="display:none">
+                    <div class="icon-checkmark check-button" ></div>
+                    <div class="icon-cross check-button" ></div>
+            </div>
+           
+        </div>
+        <ul id="content" data-url='' data-depth='1'>
+        </ul>
+        <script src="http://localhost:8080/user/user.js"></script>
+    </body>
+</html>
